@@ -1,0 +1,18 @@
+{
+  "name": "gokouopenclaw-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generate-graph-data.js",
+    "dev": "node generate-graph-data.js && vite",
+    "build": "node generate-graph-data.js && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
+  }
+}

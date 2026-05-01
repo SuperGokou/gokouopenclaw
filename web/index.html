@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gokouopenclaw — graph explorer</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: #0d1117;
+        color: #c9d1d9;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        padding: 12px 20px;
+        background: #161b22;
+        border-bottom: 1px solid #30363d;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      header h1 { font-size: 1.1rem; font-weight: 600; color: #58a6ff; }
+      header span { font-size: 0.85rem; color: #8b949e; }
+      #graph { flex: 1; }
+      svg { width: 100%; height: 100%; }
+      .node circle { stroke-width: 1.5px; cursor: pointer; }
+      .node circle.root   { fill: #388bfd; stroke: #58a6ff; }
+      .node circle.directory { fill: #3fb950; stroke: #56d364; }
+      .node circle.file   { fill: #d29922; stroke: #e3b341; }
+      .node text {
+        font-size: 11px;
+        fill: #c9d1d9;
+        pointer-events: none;
+        text-shadow: 0 0 4px #0d1117;
+      }
+      .link { stroke: #30363d; stroke-opacity: 0.8; }
+      #tooltip {
+        position: fixed;
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 12px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s;
+        max-width: 320px;
+        word-break: break-all;
+        color: #c9d1d9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>gokouopenclaw</h1>
+      <span>Repository graph explorer — drag nodes, scroll to zoom</span>
+    </header>
+    <div id="graph"></div>
+    <div id="tooltip"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
