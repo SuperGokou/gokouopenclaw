@@ -1,0 +1,48 @@
+[
+  {
+    "commit": "edc19586d071c49510b694d87d3a2d7049ae514a",
+    "timestamp": "2026-05-01T07:36:06Z",
+    "message": "Initial plan",
+    "nodes": [
+      {
+        "id": "README",
+        "label": "README",
+        "created": "2026-05-01T07:36:06Z",
+        "tags": []
+      }
+    ],
+    "edges": []
+  },
+  {
+    "commit": "106b0c9431fce02906f26479ee3a6339d7a99eb4",
+    "timestamp": "2026-05-01T07:37:32Z",
+    "message": "Initialize agent workspace: add AGENTS.md, MEMORY.md, memory/daily.md, update README",
+    "nodes": [
+      {
+        "id": "README",
+        "label": "README",
+        "created": "2026-05-01T07:36:06Z",
+        "tags": []
+      },
+      {
+        "id": "AGENTS",
+        "label": "AGENTS",
+        "created": "2026-05-01T07:37:32Z",
+        "tags": []
+      },
+      {
+        "id": "MEMORY",
+        "label": "MEMORY",
+        "created": "2026-05-01T07:37:32Z",
+        "tags": []
+      },
+      {
+        "id": "memory/daily",
+        "label": "daily",
+        "created": "2026-05-01T07:37:32Z",
+        "tags": []
+      }
+    ],
+    "edges": []
+  }
+]
