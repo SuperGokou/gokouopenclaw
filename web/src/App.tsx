@@ -42,6 +42,7 @@ export default function App() {
     return () => window.removeEventListener('mousemove', handler);
   }, []);
 
+  // Empty deps intentional: mousePosRef is a ref, so reading .current never causes stale closure.
   const handleNodeHoverWithPos = useCallback((node: RenderNode | null) => {
     setHoveredNode(node);
     if (node) {

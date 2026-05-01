@@ -79,6 +79,7 @@ export default function GraphCanvas({ currentSnapshot, previousSnapshot, onNodeH
     }
   }, []);
 
+  // Empty deps intentional: hoveredNodeRef is a ref, so reading .current never causes stale closure.
   const drawNode = useCallback((node: object, ctx: CanvasRenderingContext2D, globalScale: number) => {
     const n = node as RenderNode;
     const now = performance.now();
@@ -127,6 +128,7 @@ export default function GraphCanvas({ currentSnapshot, previousSnapshot, onNodeH
     }
   }, []);
 
+  // Empty deps intentional: pure computation on link data with no external state dependencies.
   const getLinkColor = useCallback((link: object) => {
     const l = link as RenderEdge;
     if (!l.isNew) return OLD_EDGE_COLOR;
