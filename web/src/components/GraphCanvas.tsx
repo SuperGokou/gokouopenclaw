@@ -139,7 +139,7 @@ export default function GraphCanvas({ currentSnapshot, previousSnapshot, onNodeH
     return `#00d4ff${alpha}`;
   }, []);
 
-  const handleNodeHover = useCallback((node: object | null, _prev: object | null) => {
+  const handleNodeHover = useCallback((node: object | null) => {
     const n = node as RenderNode | null;
     hoveredNodeRef.current = n?.id ?? null;
     onNodeHover(n, n ? { x: n.x ?? 0, y: n.y ?? 0 } : null);

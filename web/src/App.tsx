@@ -29,7 +29,9 @@ export default function App() {
 
   const mousePosRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const hoveredNodeRef = useRef<RenderNode | null>(null);
-  hoveredNodeRef.current = hoveredNode;
+  useEffect(() => {
+    hoveredNodeRef.current = hoveredNode;
+  }, [hoveredNode]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {

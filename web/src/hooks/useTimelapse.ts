@@ -11,7 +11,9 @@ export function useTimelapse() {
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const indexRef = useRef(currentIndex);
-  indexRef.current = currentIndex;
+  useEffect(() => {
+    indexRef.current = currentIndex;
+  }, [currentIndex]);
 
   // Load graph data
   useEffect(() => {
